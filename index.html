@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NexaFlow helps teams plan projects, manage tasks, and collaborate in one beautiful workspace.">
+  <title>NexaFlow — Project Management, Reimagined</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="NexaFlow home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M6 5v5m0 0h12m-12 0v9m12-9v9"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <rect x="2" y="2" width="8" height="6" rx="2" fill="currentColor"/>
+            <rect x="14" y="7" width="8" height="6" rx="2" fill="currentColor"/>
+            <rect x="2" y="16" width="8" height="6" rx="2" fill="currentColor"/>
+          </svg>
+        </span>
+        NexaFlow
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation"
+        aria-expanded="false" onclick="toggleMenu()">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#features" onclick="closeMenu()">Features</a>
+        <a href="#workflow" onclick="closeMenu()">How It Works</a>
+        <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+        <a href="#pricing" onclick="closeMenu()">Pricing</a>
+        <a class="btn btn-primary" href="#get-started" onclick="closeMenu()">
+          Get Started ↗
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div>
+            <div class="eyebrow">
+              <span class="pulse"></span>
+              Your team's new favourite workspace
+            </div>
+
+            <h1>
+              Make teamwork feel
+              <span class="gradient-text">effortless.</span>
+            </h1>
+
+            <p class="hero-copy">
+              Bring your projects, people, and priorities together.
+              NexaFlow gives your team the clarity to plan smarter,
+              move faster, and do its best work.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#get-started">
+                Start Free Trial →
+              </a>
+              <a class="btn btn-light" href="#features">
+                Explore Features
+              </a>
+            </div>
+
+            <div class="trust-line">
+              <div class="avatars">
+                <span class="avatar">AM</span>
+                <span class="avatar">SK</span>
+                <span class="avatar">JR</span>
+                <span class="avatar">+2</span>
+              </div>
+              <span><strong>12,000+ teams</strong> are getting work in flow</span>
+            </div>
+          </div>
+
+          <div class="dashboard-wrap">
+
+            <div class="dashboard">
+              <div class="dash-top">
+                <span class="dash-title">◈ Workspace overview</span>
+                <span class="dash-dots"><i></i><i></i><i></i></span>
+              </div>
+
+              <div class="dash-body">
+
+                <aside class="dash-side">
+                  <div class="side-label">Workspace</div>
+                  <div class="side-item active">▦ Overview</div>
+                  <div class="side-item">▤ My tasks</div>
+                  <div class="side-item">▧ Projects</div>
+
+                  <div class="side-label">Team</div>
+                  <div class="side-item">◉ Members</div>
+                  <div class="side-item">⚙ Settings</div>
+                </aside>
+
+                <div>
+                  <div class="dash-main-head">
+                    <strong>Good morning, Alex 👋</strong>
+                    <span class="tiny-btn">+ New task</span>
+                  </div>
+
+                  <div class="metric-row">
+                    <div class="metric">
+                      <small>Active projects</small>
+                      <b>08</b>
+                      <em>↗ 12% this week</em>
+                    </div>
+                    <div class="metric">
+                      <small>Tasks done</small>
+                      <b>124</b>
+                      <em>↗ 18% this week</em>
+                    </div>
+                    <div class="metric">
+                      <small>On track</small>
+                      <b>96%</b>
+                      <em>↗ Looking good</em>
+                    </div>
+                  </div>
+
+                  <div class="task-panel">
+                    <h4>Today's priorities</h4>
+
+                    <div class="task">
+                      <span class="task-check"></span>
+                      Finalise homepage design
+                      <span class="task-tag">Design</span>
+                    </div>
+
+                    <div class="task">
+                      <span class="task-check"></span>
+                      Review sprint progress
+                      <span class="task-tag">Planning</span>
+                    </div>
+
+                    <div class="task">
+                      <span class="task-check"></span>
+                      Share launch checklist
+                      <span class="task-tag">Marketing</span>
+                    </div>
+
+                    <div class="task">
+                      <span class="task-check"></span>
+                      Team sync and feedback
+                      <span class="task-tag">Team</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="floating-card float-one">
+              <div class="float-label">Project completion</div>
+              <div class="float-value">
+                84% <span class="float-green">↗ 8.2%</span>
+              </div>
+            </div>
+
+            <div class="floating-card float-two">
+              <div class="float-label">Team productivity</div>
+              <div class="float-value">↑ 24%</div>
+              <div class="float-green">Great progress!</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STATISTICS -->
+        <div class="stats">
+          <div class="stat">
+            <strong>12k+</strong>
+            <span>Happy team members</span>
+          </div>
+          <div class="stat">
+            <strong>99.9%</strong>
+            <span>Platform uptime</span>
+          </div>
+          <div class="stat">
+            <strong>4.9/5</strong>
+            <span>Average user rating</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+ 
+    <section class="features" id="features">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="section-kicker">Everything in one place</span>
+          <h2>Less busywork.
+            <span class="gradient-text">More brilliant work.</span>
+          </h2>
+          <p>
+            All the tools your team needs to stay organised,
+            connected, and confidently on track.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+            <div class="feature-icon">▦</div>
+            <h3>Smart project planning</h3>
+            <p>Map out milestones, set clear goals, and keep every project moving in the right direction.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Effortless collaboration</h3>
+            <p>Bring conversations, files, and feedback together so everyone stays on the same page.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">◷</div>
+            <h3>Time-saving automation</h3>
+            <p>Automate repetitive updates and reminders, giving your team more time for meaningful work.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">▤</div>
+            <h3>Clear task management</h3>
+            <p>Turn big goals into manageable tasks with owners, deadlines, and priorities.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⌁</div>
+            <h3>Progress insights</h3>
+            <p>See workload, progress, and project health at a glance with simple visual reports.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">♧</div>
+            <h3>Team workspace</h3>
+            <p>Keep your people and projects connected in one organised, easy-to-use workspace.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="workflow" id="workflow">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="section-kicker">A simpler way to work</span>
+          <h2>Up and running in
+            <span class="gradient-text">three steps.</span>
+          </h2>
+          <p>Get your team organised without a complicated setup or a steep learning curve.</p>
+        </div>
+
+        <div class="steps">
+
+          <article class="step">
+            <div class="step-number">01</div>
+            <h3>Create your workspace</h3>
+            <p>Set up your team space and invite the people you work with every day.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02</div>
+            <h3>Plan your projects</h3>
+            <p>Add tasks, assign owners, set deadlines, and make priorities clear.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03</div>
+            <h3>Make progress together</h3>
+            <p>Track updates, share feedback, and celebrate every milestone as a team.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="section-kicker">Kind words from teams</span>
+          <h2>Good work gets
+            <span class="gradient-text">great reviews.</span>
+          </h2>
+          <p>See how teams are bringing more focus and flow to their workdays.</p>
+        </div>
+
+        <div class="review-grid">
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>“NexaFlow brought structure to our busy projects. We spend less time chasing updates and more time getting things done.”</p>
+            <div class="review-person">
+              <span class="person-pic">SM</span>
+              <span><b>Sarah Miller</b><small>Product Manager</small></span>
+            </div>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>“The clean layout makes it easy for everyone to understand what needs to happen next. Our team collaboration feels smoother.”</p>
+            <div class="review-person">
+              <span class="person-pic">DK</span>
+              <span><b>Daniel Kim</b><small>Creative Lead</small></span>
+            </div>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>“We finally have one place for tasks, deadlines, and project updates. It is simple to use and genuinely helpful.”</p>
+            <div class="review-person">
+              <span class="person-pic">AP</span>
+              <span><b>Aisha Patel</b><small>Startup Founder</small></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="section-kicker">Simple, transparent pricing</span>
+          <h2>A plan for every
+            <span class="gradient-text">kind of team.</span>
+          </h2>
+          <p>Start small, find your flow, and grow when you're ready.</p>
+        </div>
+
+        <div class="price-grid">
+
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="desc">For individuals and small teams.</p>
+            <div class="price">Free <small>/ forever</small></div>
+            <ul>
+              <li>Up to 3 projects</li>
+              <li>Basic task management</li>
+              <li>Team collaboration</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn btn-light" href="#get-started">Get started</a>
+          </article>
+
+          <article class="price-card popular">
+            <span class="popular-label">MOST POPULAR</span>
+            <h3>Pro</h3>
+            <p class="desc">For teams ready to do more.</p>
+            <div class="price">$12 <small>/ user / month</small></div>
+            <ul>
+              <li>Unlimited projects</li>
+              <li>Advanced project views</li>
+              <li>Automation tools</li>
+              <li>Progress reports</li>
+            </ul>
+            <a class="btn btn-primary" href="#get-started">Start free trial</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Business</h3>
+            <p class="desc">For growing organisations.</p>
+            <div class="price">$24 <small>/ user / month</small></div>
+            <ul>
+              <li>Everything in Pro</li>
+              <li>Advanced permissions</li>
+              <li>Priority support</li>
+              <li>Custom team workflows</li>
+            </ul>
+            <a class="btn btn-light" href="#get-started">Contact sales</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="cta" id="get-started">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to make work flow?</h2>
+          <p>Bring your team together, make priorities clear, and turn your next big idea into progress.</p>
+          <a class="btn" href="mailto:hello@nexaflow.example">
+            Let's get started →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer>
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#home">
+            <span class="brand-mark">✦</span>
+            NexaFlow
+          </a>
+          <p>A calmer, clearer way for teams to plan projects and do their best work together.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <b>Explore</b>
+            <a href="#features">Features</a>
+            <a href="#workflow">How it works</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+
+          <div class="footer-col">
+            <b>Company</b>
+            <a href="#testimonials">About us</a>
+            <a href="mailto:hello@nexaflow.example">Contact</a>
+            <a href="#home">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 NexaFlow. All rights reserved.</span>
+        <span>Made for teams that make things happen.</span>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
